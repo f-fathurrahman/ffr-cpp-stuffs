@@ -15,6 +15,9 @@ sprig/SPG_extended.o  sprig/SPG_polygon.o     sprig/SPG_rotation.o \
 sprig/SPG_misc.o  sprig/SPG_primitives.o  sprig/SPG_surface.o \
 wayang/list.o  wayang/wayang.o
 
+lib: $(OBJS)
+	ar rcs libmain.a $(OBJS)
+
 sprig/SPG_extended.o:
 	$(CXX) $(CXX_FLAGS) $(CXX_INCLUDES) sprig/SPG_extended.c -c -o sprig/SPG_extended.o
 
@@ -38,9 +41,3 @@ wayang/list.o:
 
 wayang/wayang.o:
 	$(CXX) $(CXX_FLAGS) $(CXX_INCLUDES) wayang/wayang.cpp -c -o wayang/wayang.o
-
-
-lib: $(OBJS)
-	ar rcs libmain.a $(OBJS)
-
-
