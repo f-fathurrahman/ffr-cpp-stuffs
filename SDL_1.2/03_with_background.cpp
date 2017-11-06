@@ -70,6 +70,8 @@ int main( int argc, char **argv )
   apply_surface( 320, 240, background, screen );
   apply_surface( 180, 140, message, screen );
 
+  // update screen
+  // needed, without this the screen will only display black background
   if( SDL_Flip(screen) == -1 ) {
     return 1;
   }
