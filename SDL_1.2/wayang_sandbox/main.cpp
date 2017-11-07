@@ -12,7 +12,7 @@
 
 #include "praktikum1.cpp"
 #include "praktikum2.cpp"
-
+#include "praktikum3.cpp"
 
 int main()
 {
@@ -25,10 +25,10 @@ int main()
 
   lat1_2();
   dPause(TPAUSE);
-  
+
   lat1_3();
   dPause(TPAUSE);
-  
+
   lat1_4();
   dPause(TPAUSE);
 
@@ -37,15 +37,18 @@ int main()
   lat2_1();
 
   lat2_2();
-//  dPause(TPAUSE);
+  dPause(TPAUSE);
 
-//  lat2_3();
-//  dPause(TPAUSE);
+  lat2_3();
+  dPause(TPAUSE);
 
   lat2_4();
   dPause(TPAUSE);
 
+  lat3_1();
+  dPause(TPAUSE);
+
   kClose();
-  
+
   return 0;
 }
