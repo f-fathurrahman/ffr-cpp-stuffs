@@ -87,36 +87,7 @@ int main()
 
   drawsegi_n(0, -200, 5, 100);
 
-/*
-  hWayang benda_langit;
-  benda_langit = wCreate (3, "images/alam/bulan_01.png",
-                             "images/alam/hujan.png",
-                             "images/alam/matahari_01.png");
-
-	wJumpTo(benda_langit, 0, 0); 
-  wShow(benda_langit); 
-
-  wShow(benda_langit);
-  dPause(10000);
-  wNextState(benda_langit);
-  dPause(10000);
-  wNextState(benda_langit);
-
-	dDelay(1000);
-
-	wJumpTo(benda_langit, 0, 100); 
-  wNextState(benda_langit);
-	dDelay(1000);
-
-	wJumpTo(benda_langit, 100, 100); 
-  wNextState(benda_langit);
-
-  wBlink(benda_langit, 4); 
-*/
-
-
-
-	dPause(10000);
+  dPause(5000);
 
   kClose();
 
