@@ -52,13 +52,23 @@ void test2()
 
 void test3()
 {
-  hUkoro teks5 = uCreate("fonts/truetype/freefont/FreeSerif.ttf", 20);
+  hUkoro teks5 = uCreate("fonts/truetype/freefont/FreeSerif.ttf", 30);
   uSetColor(teks5, BLACK);
   uSetText(teks5, "Running text");
-  for(int j=410; j > -400; j=j-1) {
-    uJumpTo(teks5,j,-250);
-    uSetMode(teks5, MODE_RIGHT + MODE_SHOW);
-    printf("j = %d\n", j);
+
+  for(int l = 0; l < 2; l++) {
+    // kiri ke kanan
+    for(int j=-295; j < 400; j=j+5) {
+      uJumpTo(teks5,j,-250);
+      uSetMode(teks5, MODE_RIGHT + MODE_SHOW);
+      printf("j = %d\n", j);
+    }
+    // kanan ke kiri
+    for(int j=400; j > -300; j=j-5) { // 300: value more negative than -295
+      uJumpTo(teks5,j,-250);
+      uSetMode(teks5, MODE_RIGHT + MODE_SHOW);
+      printf("j = %d\n", j);
+    }
   }
 }
 

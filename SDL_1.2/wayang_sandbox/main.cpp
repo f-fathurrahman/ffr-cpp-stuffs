@@ -13,6 +13,7 @@
 #include "praktikum1.cpp"
 #include "praktikum2.cpp"
 #include "praktikum3.cpp"
+#include "praktikum4.cpp"
 
 int main()
 {
@@ -21,9 +22,9 @@ int main()
 
   about();
 
-  kOpen(800, 600, "images/wayang/kelir_01.jpg" );
+  kOpen(800, 600, "images/layar/infantis_246.jpg");
 
-  lat1_2();
+/*  lat1_2();
   dPause(TPAUSE);
 
   lat1_3();
@@ -46,6 +47,10 @@ int main()
   dPause(TPAUSE);
 
   lat3_1();
+  dPause(TPAUSE);
+*/
+
+  lat4_1();
   dPause(TPAUSE);
 
   kClose();
