@@ -46,6 +46,7 @@ void tugas5_1()
     // posisi y selalu di 0
     wJumpTo( matahari[i], xpos, 0);
     wShow( matahari[i] );
+	  printf("item = %d h = %d, w = %d\n", i, wGetH(matahari[i]), wGetW(matahari[i]));
   }
   
 }
