@@ -54,8 +54,21 @@ void tugas5_1()
 // sort
 void tugas5_2()
 {
-  // bisa gunakan fungsi wGetH atau wGetW
-  //printf("item = %d h = %d, w = %d\n", i, wGetH(matahari[i]), wGetW(matahari[i]));
+  int i;
+	int imins = 0;
+  int imaks = 0;
+  // komparasi dgn tinggi, pakai wGetH
+  for( i = 0; i < NWAYANG; i++ ){
+    if( wGetH(matahari[i]) < wGetH(matahari[imins]) ) imins = i;
+    if( wGetH(matahari[i]) > wGetH(matahari[imaks]) ) imaks = i;
+  }
+
+  printf("max height = %d\n", wGetH(matahari[imaks]));
+  printf("min height = %d\n", wGetH(matahari[imins]));
+
+  wMove( matahari[imins], 0, -100) ;
+  wMove( matahari[imaks], 0,  100) ;
+  dDelay(1000);
 }
 
 
@@ -65,6 +78,8 @@ int main()
   kOpen(800, 600, "images/wayang/keraton.jpg");
 
   tugas5_1();
+
+  tugas5_2();
 
   dPause(5000);
 
