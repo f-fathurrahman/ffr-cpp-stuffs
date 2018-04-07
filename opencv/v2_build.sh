@@ -5,7 +5,7 @@ LIBS=`pkg-config --libs opencv`
 
 rm -vf $basn.x
 
-g++ -Wall $1 -o $basn.x $LIBS
+g++ -Wall $INC $1 -o $basn.x $LIBS
 
 echo "Executable: $basn.x"
 
