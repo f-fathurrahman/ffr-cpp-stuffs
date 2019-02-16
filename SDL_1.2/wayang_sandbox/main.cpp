@@ -22,9 +22,9 @@ int main()
 
   about();
 
-  kOpen(800, 600, "images/layar/infantis_246.jpg");
+  kOpen(800, 600, "images/layar/kelir_01.jpg");
 
-/*  lat1_2();
+  lat1_2();
   dPause(TPAUSE);
 
   lat1_3();
@@ -48,7 +48,6 @@ int main()
 
   lat3_1();
   dPause(TPAUSE);
-*/
 
   lat4_1();
   dPause(TPAUSE);
