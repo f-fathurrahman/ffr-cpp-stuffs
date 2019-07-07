@@ -1,3 +1,4 @@
+#include <cstdio>
 #include <vtkFloatArray.h>
 #include <vtkSmartPointer.h>
  
@@ -9,6 +10,8 @@ int main(int argc, char *argv[])
   WithSmartPointers();
   WithoutSmartPointers();
  
+  printf("This is before the end\n");
+
   return 0;
 }
  
