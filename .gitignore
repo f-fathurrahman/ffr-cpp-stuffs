@@ -3,6 +3,8 @@
 *~
 *.x
 
+IMG_*
+
 # Prerequisites
 *.d
 
