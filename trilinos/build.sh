@@ -1,0 +1,1 @@
+mpic++ 01_test_config.cpp -I /usr/include/trilinos/ -ltrilinos_epetra
