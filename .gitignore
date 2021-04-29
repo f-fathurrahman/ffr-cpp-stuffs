@@ -3,6 +3,8 @@
 *~
 *.x
 
+ORIG_*
+TEMP_*
 IMG_*
 
 # Prerequisites
