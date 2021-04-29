@@ -25,8 +25,9 @@ void create_first_grid()
     // Fill the triangulation with a single cell for a square domain.
     // The triangulation is the refined four times, to yield $4^4=256$
     // cells in total
+    int Nrefine = 1;
     GridGenerator::hyper_cube(triangulation);
-    triangulation.refine_global(4);
+    triangulation.refine_global(Nrefine);
 
     // Write a graphical representation of the mesh to an output file.
     std::ofstream out("IMG_grid-1.eps");
