@@ -3,6 +3,7 @@
 *~
 *.x
 
+build_cmake
 ORIG_*
 TEMP_*
 IMG_*
