@@ -91,13 +91,93 @@
 
 \subsection{Struktur Dasar Program C++}
 
+Suatu program C++ sederhana dapat berbentuk sebagai berikut.
 \begin{cppcode}
+// Program Hello
+// Menampilkan teks ke layar terminal
+// 
+// Author: Dudun
+// (c) 2021
+
 #include <iostream>
 
 using namespace std;
 
-int main() {
-  cout << "Halo, nama saya adalah XXX" << endl;
+int main()
+{
+  // Kode program
+  cout << "Halo, nama saya adalah Dudun" << endl;
+
+  return 0;
+}
+\end{cppcode}
+
+Kode C++ berbentuk file teks dengan ekstensi \txtinline{.cpp},
+\txtinline{.cxx} atau \txtinline{.C}
+
+Penjelasan program:
+
+\begin{cppcode}
+// Program Hello
+// Menampilkan teks ke layar terminal
+// 
+// Author: Dudun
+// (c) 2021
+\end{cppcode}
+Baris yang diawali dengan tanda \txtinline{//} menyatakan komentar, yaitu bagian
+program yang ditujukan untuk manusia dan komputer akan mengabaikan teks yang ada
+pada komentar. Komentar pada bagian awal biasanya berisi:
+\begin{itemize}
+\item penjelasan mengenai kode yang dibuat, misalnya apa yang akan dilakukan oleh
+    program,
+\item nama programmer,
+\item lisensi program, dan
+\item info lainnya
+\end{itemize}
+
+\begin{cppcode}
+#include <iostream>
+\end{cppcode}
+
+Bagian yang diawali dengan tanda \# menyatakan direktif.
+Dalam program ini kita memberitahu compiler bahwa kita akan menggunakan
+pustaka standard untuk input-output dengan menyertakan header bernama
+\txtinline{iostream}.
+
+
+\begin{cppcode}
+using namespace std;
+\end{cppcode}
+
+
+
+
+\begin{cppcode}
+int main()
+{
+  // Kode program
+  cout << "Halo, nama saya adalah Dudun" << endl;
+
+  return 0;
+}
+\end{cppcode}
+
+Titik awal eksekusi dari dari suatu program C++ adalah sebuah fungsi
+bernama \cppinline{main}.
+
+Fungsi ini memiliki tipe kembalian
+\cppinline{int}. Kode program yang membangun fungsi ini diketikkan
+dalam tanda kurung kurawal \cppinline{ {} }
+
+
+
+Alternatif:
+\begin{cppcode}
+#include <iostream>
+
+int main()
+{
+  std::cout << "Halo, nama saya adalah Dudun" << std::endl;
   return 0;
 }
 \end{cppcode}
@@ -109,10 +189,15 @@ int main() {
 cout << 
 \end{cppcode}
 
+Operator \cppinline{<<} dikenal dengan insertion operator.
+
+Operator \cppinline{>>} dikenal dengan extraction operator.
 
 \begin{cppcode}
 cin >>
 \end{cppcode}
+
+Penggunaan getline
 
 
 \section{Praktikum}
