@@ -1,74 +1,6 @@
 \documentclass[a4paper,11pt,bahasa]{article} % screen setting
 
-\usepackage[a4paper]{geometry}
-\geometry{verbose,tmargin=1.5cm,bmargin=1.5cm,lmargin=1.5cm,rmargin=1.5cm}
-
-\setlength{\parskip}{\smallskipamount}
-\setlength{\parindent}{0pt}
-
-%\usepackage{fontspec}
-\usepackage[libertine]{newtxmath}
-\usepackage[no-math]{fontspec}
-\setmainfont{Linux Libertine O}
-\setmonofont{DejaVu Sans Mono}
-
-\usepackage{hyperref}
-\usepackage{url}
-\usepackage{xcolor}
-
-\usepackage{graphicx}
-\usepackage{float}
-
-\usepackage{minted}
-
-\newminted{cpp}{breaklines,fontsize=\footnotesize}
-\newminted{bash}{breaklines,fontsize=\footnotesize}
-\newminted{text}{breaklines,fontsize=\footnotesize}
-
-\newcommand{\txtinline}[1]{\mintinline[breaklines,fontsize=\footnotesize]{text}{#1}}
-\newcommand{\cppinline}[1]{\mintinline[breaklines,fontsize=\footnotesize]{cpp}{#1}}
-
-\definecolor{mintedbg}{rgb}{0.90,0.90,0.90}
-\usepackage{mdframed}
-\BeforeBeginEnvironment{minted}{
-    \begin{mdframed}[backgroundcolor=mintedbg,%
-        topline=false,bottomline=false,%
-        leftline=false,rightline=false]
-}
-\AfterEndEnvironment{minted}{\end{mdframed}}
-
-
-%\usepackage{setspace}
-%\onehalfspacing
-
-\usepackage{appendix}
-
-
-\newcommand{\highlighteq}[1]{\colorbox{blue!25}{$\displaystyle#1$}}
-\newcommand{\highlight}[1]{\colorbox{red!25}{#1}}
-
-
-\newcounter{soal}%[section]
-\newenvironment{soal}[1][]{\refstepcounter{soal}\par\medskip
-   \noindent \textbf{Soal~\thesoal. #1} \sffamily}{\medskip}
-
-
-\definecolor{mintedbg}{rgb}{0.95,0.95,0.95}
-\BeforeBeginEnvironment{minted}{
-    \begin{mdframed}[backgroundcolor=mintedbg,%
-        topline=false,bottomline=false,%
-        leftline=false,rightline=false]
-}
-\AfterEndEnvironment{minted}{\end{mdframed}}
-
-
-\BeforeBeginEnvironment{soal}{
-    \begin{mdframed}[%
-        topline=true,bottomline=true,%
-        leftline=true,rightline=true]
-}
-\AfterEndEnvironment{soal}{\end{mdframed}}
-
+\input{PREAMBLE1}
 
 \begin{document}
 
@@ -144,12 +76,16 @@ Dalam program ini kita memberitahu compiler bahwa kita akan menggunakan
 pustaka standard untuk input-output dengan menyertakan header bernama
 \txtinline{iostream}.
 
-
 \begin{cppcode}
 using namespace std;
 \end{cppcode}
-
-
+Pada bagian ini kita menggunakan ruang nama atau namespace bernama \txtinline{std}.
+Namespace ini berisi beberapa simbol yang sering kita gunakan pada pustaka standard
+misalnya:
+\txtinline{cout}, \txtinline{cin}, \txtinline{endl}, dan sebagainya.
+Jika kita tidak menggunakan atau meng-import namespace ini, maka kita harus menggunakannya
+secara eksplisit, misalnya:
+\txtinline{std::cout}, \txtinline{std::cin}, \txtinline{std::endl}.
 
 
 \begin{cppcode}
@@ -167,7 +103,18 @@ bernama \cppinline{main}.
 
 Fungsi ini memiliki tipe kembalian
 \cppinline{int}. Kode program yang membangun fungsi ini diketikkan
-dalam tanda kurung kurawal \cppinline{ {} }
+dalam tanda kurung kurawal \cppinline{ {} }.
+Baris-baris program utama yang akan kita jalankan berada dalam tanda kurung kurawal
+ini. Pada contoh ini ada dua baris kode, yaitu yang diawali dengan
+tanda \cppinline{cout} dan \cppinline{return}.
+
+\begin{cppcode}
+cout << "Halo, nama saya adalah Dudun" << endl;
+\end{cppcode}
+Kode ini menginstruksikan program untuk menampilkan teks yang diapit dengan
+tanda petik ganda, seperti \cppinline{"Halo, nama saya adalah Dudun"},
+pada piranti keluaran standard, dalam hal ini adalah layar terminal.
+
 
 
 
