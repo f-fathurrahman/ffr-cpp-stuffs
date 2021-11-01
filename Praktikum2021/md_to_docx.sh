@@ -1,0 +1,1 @@
+pandoc -s -o Fungsi01.docx Fungsi01.md
